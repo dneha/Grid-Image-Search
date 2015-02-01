@@ -1,0 +1,124 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.codepath.gridimagesearch.SettingsActivity"
+    android:id="@+id/settings"
+    android:outlineProvider="background"
+    android:textAlignment="gravity"
+    android:background="#ffecd4b3">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Advanced Search Options"
+        android:id="@+id/tvSettingsLabel"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Image Size"
+        android:id="@+id/tvSettingSizeLabel"
+        android:layout_below="@+id/tvSettingsLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Color Filter"
+        android:id="@+id/tvSettingColorLabel"
+        android:layout_below="@+id/tvSettingSizeLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Image Type"
+        android:id="@+id/tvSettingTypeLabel"
+        android:layout_below="@+id/tvSettingColorLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Site Filter"
+        android:id="@+id/tvSettingSiteLabel"
+        android:layout_below="@+id/tvSettingTypeLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingTop="20dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etSite"
+        android:layout_below="@+id/tvSettingTypeLabel"
+        android:layout_toRightOf="@+id/tvSettingSiteLabel"
+        android:layout_toEndOf="@+id/tvSettingSiteLabel"
+        android:paddingTop="20dp"
+        android:paddingLeft="20dp"
+        android:hint="yahoo.com"
+        android:layout_alignParentRight="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:id="@+id/buttonSave"
+        android:layout_below="@+id/etSite"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="false"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:onClick="OnSaveClicked" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:id="@+id/spinnerImageType"
+        android:layout_alignBottom="@+id/tvSettingTypeLabel"
+        android:layout_toRightOf="@+id/tvSettingTypeLabel"
+        android:layout_toEndOf="@+id/tvSettingTypeLabel"
+        android:layout_marginLeft="20dp"/>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:id="@+id/spinnerSize"
+        android:layout_alignBottom="@+id/tvSettingSizeLabel"
+        android:layout_toRightOf="@+id/tvSettingSizeLabel"
+        android:layout_toEndOf="@+id/tvSettingSizeLabel"
+        android:layout_marginLeft="20dp"/>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:id="@+id/spinnerColor"
+        android:layout_alignBottom="@+id/tvSettingColorLabel"
+        android:layout_toRightOf="@+id/tvSettingColorLabel"
+        android:layout_toEndOf="@+id/tvSettingColorLabel"
+        android:layout_marginLeft="20dp" />
+
+    <!-- android:entries="@array/type_array"
+     android:paddingLeft="30dp"
+     android:gravity="right"
+     android:layout_alignParentEnd="true"
+
+     android:spinnerMode="dialog"
+     android:textAlignment="gravity" />
+-->
+        
+
+</RelativeLayout>
